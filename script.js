@@ -1,3 +1,6 @@
+
+let Predator = require("./Predator")
+
 function generator(matLen, gr, grEat, pr, st, hu, eag) {
     let matrix = [];
     for (let i = 0; i < matLen; i++) {
