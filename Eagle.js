@@ -1,3 +1,5 @@
+let LivingCreature = require('./LivingCreature')
+
 module.exports = class Eagle extends LivingCreature  {
     constructor(x, y) {
         super(x, y);
@@ -25,7 +27,7 @@ module.exports = class Eagle extends LivingCreature  {
     mul() {
         this.multiply++;
         var emptyCells = this.chooseCell(0);
-        var newCell = random(emptyCells);
+        var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
 
 
         if (newCell && this.multiply >= 12) {

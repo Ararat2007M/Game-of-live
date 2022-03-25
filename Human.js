@@ -1,3 +1,5 @@
+let LivingCreature = require('./LivingCreature')
+
 module.exports = class Human extends LivingCreature {
     constructor(x, y) {
         super(x, y);
@@ -25,7 +27,7 @@ module.exports = class Human extends LivingCreature {
     mul() {
         this.multiply++;
         var emptyCells = this.chooseCell(0);
-        var newCell = random(emptyCells);
+        let newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
 
         if (newCell && this.multiply >= 10) {
             var newX = newCell[0];
