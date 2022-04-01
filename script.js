@@ -7,7 +7,7 @@ var side = 10;
 
 
 function setup() {
-    frameRate(10);
+    // frameRate(10);
     createCanvas(50 * side, 50 * side);
     background('#acacac');
 }
@@ -31,9 +31,9 @@ function nkarel(matrix) {
             else if (matrix[y][x] == 3) {
                 fill("red")
             }
-            else if (matrix[y][x] == 4) {
-                fill("#2a9d8f")
-            }
+            // else if (matrix[y][x] == 4) {
+            //     fill("#2a9d8f")
+            // }
             else if (matrix[y][x] == 5) {
                 fill("#fec89a")
             }
