@@ -52,8 +52,8 @@ module.exports = class Smoke extends LivingCreature {
     }
 
     eat() {
-        // var emptyCells = this.chooseCell(2)
-        // var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
+        var emptyCells = this.chooseCell(2)
+        var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
         var emptyCells1 = this.chooseCell(3)
         var newCell1 = emptyCells1[Math.floor(Math.random() * emptyCells1.length)]
         var emptyCells2 = this.chooseCell(5)
@@ -61,23 +61,22 @@ module.exports = class Smoke extends LivingCreature {
         var emptyCells3 = this.chooseCell(6)
         var newCell3 = emptyCells3[Math.floor(Math.random() * emptyCells3.length)]
 
-        // if (newCell) {
-        //     var newX = newCell[0]
-        //     var newY = newCell[1]
+        if (newCell) {
+            var newX = newCell[0]
+            var newY = newCell[1]
 
-        //     matrix[newY][newX] = matrix[this.y][this.x]
-        //     matrix[this.y][this.x] = 0
-        //     this.x = newX
-        //     this.y = newY
-        //     for (var i in grassEaterArr) {
-        //         if (newX == grassEaterArr[i].x && newY == grassEaterArr[i].y) {
-        //             grassEaterArr.splice(i, 1)
-        //             break
-        //         }
-        //     }
-        // }
-        // else 
-        if (newCell1) {
+            matrix[newY][newX] = matrix[this.y][this.x]
+            matrix[this.y][this.x] = 0
+            this.x = newX
+            this.y = newY
+            for (var i in grassEaterArr) {
+                if (newX == grassEaterArr[i].x && newY == grassEaterArr[i].y) {
+                    grassEaterArr.splice(i, 1)
+                    break
+                }
+            }
+        }
+        else if (newCell1) {
             var newX = newCell1[0]
             var newY = newCell1[1]
 
