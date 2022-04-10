@@ -62,33 +62,32 @@ module.exports = class Human extends LivingCreature {
     }
 
     eat() {
-        // var emptyCells = this.chooseCell(1)
-        // var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
+        var emptyCells = this.chooseCell(1)
+        var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
         var emptyCells1 = this.chooseCell(3)
         var newCell1 = emptyCells1[Math.floor(Math.random() * emptyCells1.length)]
         var a      
         for(let i in predatorArr) {
             a = predatorArr[i].energy;
         }
-        // if (newCell) {
-        //     this.energy++
-        //     var newX = newCell[0]
-        //     var newY = newCell[1]
+        if (newCell) {
+            this.energy++
+            var newX = newCell[0]
+            var newY = newCell[1]
 
-        //     matrix[newY][newX] = matrix[this.y][this.x]
-        //     matrix[this.y][this.x] = 0
-        //     this.x = newX
-        //     this.y = newY
-        //     for (var i in grassArr) {
-        //         if (newX == grassArr[i].x && newY == grassArr[i].y) {
-        //             grassArr.splice(i, 1)
-        //             break
-        //         }
-        //     }
+            matrix[newY][newX] = matrix[this.y][this.x]
+            matrix[this.y][this.x] = 0
+            this.x = newX
+            this.y = newY
+            for (var i in grassArr) {
+                if (newX == grassArr[i].x && newY == grassArr[i].y) {
+                    grassArr.splice(i, 1)
+                    break
+                }
+            }
             
-        // }
-        // else 
-        if (newCell1 && a > this.energy) {
+        }
+        else if (newCell1 && a > this.energy) {
             var newX = newCell1[0]
             var newY = newCell1[1]
 
